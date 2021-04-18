@@ -1,4 +1,4 @@
-package java.com.erikmolssons.template;
+package com.erikmolssons.template;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

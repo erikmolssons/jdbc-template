@@ -1,4 +1,4 @@
-package java.com.erikmolssons.template;
+package com.erikmolssons.template;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

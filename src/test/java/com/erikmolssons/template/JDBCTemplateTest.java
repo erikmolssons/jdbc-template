@@ -1,6 +1,5 @@
-package template;
+package com.erikmolssons.template;
 
-import com.erikmolssons.template.JDBCTemplate;
 import com.zaxxer.hikari.HikariConfig;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
