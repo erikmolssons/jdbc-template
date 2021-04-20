@@ -6,6 +6,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public final class JDBCTemplate {
 
@@ -29,7 +30,7 @@ public final class JDBCTemplate {
         return list;
     }
 
-    public <T> T queryForObject(String sql, RowMapper<T> rowMapper) {
+    public <T> Optional<T> queryForObject(String sql, RowMapper<T> rowMapper) {
         T t = null;
         try (var connection = this.dataSource.getConnection();
              var statement = connection.prepareStatement(sql)) {
@@ -40,7 +41,7 @@ public final class JDBCTemplate {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return t;
+        return Optional.ofNullable(t);
     }
 
     public int query(String sql, PreparedStatementBuilder preparedStatementBuilder) {
