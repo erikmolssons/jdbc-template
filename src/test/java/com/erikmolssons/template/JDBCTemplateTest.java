@@ -45,7 +45,7 @@ class JDBCTemplateTest {
             return e;
         });
         Assertions.assertEquals(Employee.class, l.getClass());
-        Assertions.assertEquals(l.id, 2);
+        Assertions.assertEquals(l.get().id, 2);
     }
 
     @Test
